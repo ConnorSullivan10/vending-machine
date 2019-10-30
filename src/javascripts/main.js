@@ -6,7 +6,6 @@ import '../styles/main.scss';
 
 const init = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
-  console.log('hi', apiKeys.firebaseKeys);
 };
 
 init();
