@@ -1,0 +1,42 @@
+{
+  "snack1": {
+    "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_59431955-a424-4fcc-b023-657ca840b281?wid=488&hei=488&fmt=pjpeg",
+    "name": "Takis",
+    "price": 100,
+    "currentStocked" : 11,
+    "lifetimeNum" : 20,
+    "uid": "wO6XKnrEOrVfM7oki5r0qjfk1Mt2"
+  },
+  "snack2": {
+    "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_923a37f2-95b7-4a86-90b6-9c506bc38aad?wid=488&hei=488&fmt=pjpeg",
+    "name": "Lays",
+    "price": 75,
+    "currentStocked" : 2,
+    "lifetimeNum" : 6,
+    "uid": "wO6XKnrEOrVfM7oki5r0qjfk1Mt2"
+  },
+  "snack3": {
+    "imageUrl": "https://i5.walmartimages.com/asr/9e391b9c-462a-4ca6-8832-5e56159f999d_1.aedccea75551f143d7ab991716ec8e05.jpeg",
+    "name": "Doritos",
+    "price": 85,
+    "currentStocked" : 4,
+    "lifetimeNum" : 8,
+    "uid": "wO6XKnrEOrVfM7oki5r0qjfk1Mt2"
+  },
+  "snack4": {
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/91Kad-jepLL._SX342_.jpg",
+    "name": "SourWorms",
+    "price": 125,
+    "currentStocked" : 3,
+    "lifetimeNum" : 10,
+    "uid": "wO6XKnrEOrVfM7oki5r0qjfk1Mt2"
+  },
+  "snack5": {
+    "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_dcf575a8-dd02-4355-96ad-d55d6fec44a4?wid=488&hei=488&fmt=pjpeg",
+    "name": "Funyuns",
+    "price": 30,
+    "currentStocked" : 6,
+    "lifetimeNum" : 12,
+    "uid": "12345"
+  }
+}
