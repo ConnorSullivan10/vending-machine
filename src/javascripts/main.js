@@ -5,7 +5,6 @@ import authData from './helpers/data/authData';
 import myNavbar from './components/MyNavbar/myNavbar';
 import machine from './components/Machine/machine';
 
-
 import apiKeys from './helpers/apiKeys.json';
 
 import '../styles/main.scss';
