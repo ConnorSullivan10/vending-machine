@@ -1,4 +1,3 @@
-
 import smash from '../../helpers/data/smash';
 import utilities from '../../helpers/utilities';
 
