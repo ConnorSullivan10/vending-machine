@@ -1,10 +1,15 @@
-
 import machineData from './machineData';
 import positionData from './positionData';
 import snackPositionData from './snackPositionData';
 import snackData from './snackData';
 
 const getCompleteMachine = () => new Promise((resolve, reject) => {
+  //  1. getMachines - returns first machine (hard coding) - DONE
+// 2. use MachineId to get all positions for that machine - DONE
+// 3.  use MachineId to get all snack positions - DONE
+// 4.  use uid of snackPositions/positions to get available snacks for that machine - DONE
+// 5.  SMASH EM' - return an array of positions (in order A1, A2, A3, B1 ....) .
+// so positions should have position.snack if a snack exists at that position
   machineData.getMachine()
     .then((singleMachine) => positionData.getAllPositionsByMachineId(singleMachine.id))
     .then((positions) => {
@@ -58,4 +63,24 @@ const getSnacksWithPositions = (uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default { getCompleteMachine, getSnacksWithPositions };
+const getAvailablePositions = () => new Promise((resolve, reject) => {
+  machineData.getMachine().then((machine) => {
+    positionData.getAllPositionsByMachineId(machine.id).then((positions) => {
+      snackPositionData.getAllSnackPositionsByMachineId(machine.id).then((snackPositions) => {
+        const newPositions = [];
+        positions.forEach((position) => {
+          const newPosition = { ...position };
+          const getSnackPosition = snackPositions.find((x) => x.positionId === newPosition.id);
+          if (!getSnackPosition) {
+            newPosition.machineId = machine.id;
+            newPositions.push(newPosition);
+          }
+        });
+        resolve(newPositions);
+      });
+    });
+  })
+    .catch((error) => reject(error));
+});
+
+export default { getCompleteMachine, getSnacksWithPositions, getAvailablePositions };
